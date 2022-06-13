@@ -37,16 +37,56 @@ class FaceViewController: UIViewController
         }
     }
     
-    @IBAction func toggleEyes(_ recognizer: UITapGestureRecognizer)
-    {
-        if recognizer.state == .ended{
-            switch expression.eyes{
-            case .Open: expression.eyes = .Closed
-            case .Closed: expression.eyes = .Open
-            case .Squinting: break
-            }
-        }
+//    @IBAction func toggleEyes(_ recognizer: UITapGestureRecognizer)
+//    {
+//        if recognizer.state == .ended{
+//            switch expression.eyes{
+//            case .Open: expression.eyes = .Closed
+//            case .Closed: expression.eyes = .Open
+//            case .Squinting: break
+//            }
+//        }
+//    }
+    
+    private struct Animation {
+        static let ShakeAngle = CGFloat( Float.pi / 6 )
+        static let ShakeDuration = 0.5
     }
+    @IBAction func headShake(_ sender: UITapGestureRecognizer)
+    {
+        UIView.animate(
+            withDuration: Animation.ShakeDuration,
+            animations: {
+                self.faceView.transform = CGAffineTransform(rotationAngle: Animation.ShakeAngle)
+            },
+            completion: { finished in
+                if finished {
+                    UIView.animate(
+                        withDuration: Animation.ShakeDuration,
+                        animations: {
+                            self.faceView.transform = CGAffineTransform(rotationAngle: -Animation.ShakeAngle)
+                        },
+                        completion: { finished in
+                            if finished {
+                                UIView.animate(
+                                    withDuration: Animation.ShakeDuration,
+                                    animations: {
+                                        self.faceView.transform = CGAffineTransform.identity
+                                    },
+                                    completion: { finished in
+                                        if finished {
+                                            
+                                        }
+                                    }
+                                )
+                            }
+                        }
+                    )
+                }
+            }
+        )
+    }
+    
     
     @objc
     func increaseHappiness()
@@ -60,6 +100,7 @@ class FaceViewController: UIViewController
         expression.mouth = expression.mouth.sadderMouth()
     }
     
+   
     
     private var mouthCurvatures = [ FacialExpression.Mouth.Frown: -1.0, .Grin: 0.5, .Smile: 1.0, .Smirk: -0.5, .Neutral: 0.0 ]
     private var eyeBrouwTilts = [ FacialExpression.EyeBrows.Relaxed: 0.5, .Furrowed: -0.5, .Normal: 0.0 ]

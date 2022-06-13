@@ -21,10 +21,10 @@
             </objects>
             <point key="canvasLocation" x="-1903" y="-907"/>
         </scene>
-        <!--Face View Controller-->
+        <!--Blinking Face View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="FaceViewController" customModule="Faceit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BlinkingFaceViewController" customModule="Faceit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,13 +61,13 @@
                     </view>
                     <navigationItem key="navigationItem" id="q2n-V6-Fup"/>
                     <connections>
-                        <outlet property="faceView" destination="H7R-sL-5lZ" id="vNE-1X-wy5"/>
+                        <outlet property="faceView" destination="H7R-sL-5lZ" id="vIx-zt-UmA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="4yD-e2-UQH">
                     <connections>
-                        <action selector="toggleEyes:" destination="BYZ-38-t0r" id="OzA-vA-CZz"/>
+                        <action selector="headShake:" destination="BYZ-38-t0r" id="CsG-dq-atM"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>

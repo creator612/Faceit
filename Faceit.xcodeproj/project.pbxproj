@@ -15,6 +15,8 @@
 		6E0070AA284A099100839C60 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0070A8284A099100839C60 /* LaunchScreen.storyboard */; };
 		6E27A7C6284A0BA100A1A855 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E27A7C5284A0BA100A1A855 /* FaceView.swift */; };
 		6E43CCB4284B497E00A239AD /* FacialExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E43CCB3284B497E00A239AD /* FacialExpression.swift */; };
+		6EAD181B28573BF0007B6728 /* BlinkingFaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAD181A28573BF0007B6728 /* BlinkingFaceViewController.swift */; };
+		6EAFE68D28573FDC00FDD803 /* EyeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EAFE68C28573FDC00FDD803 /* EyeView.swift */; };
 		6EC516B7284DC32900168430 /* EmotionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EC516B6284DC32900168430 /* EmotionsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +31,8 @@
 		6E0070AB284A099100839C60 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E27A7C5284A0BA100A1A855 /* FaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
 		6E43CCB3284B497E00A239AD /* FacialExpression.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FacialExpression.swift; sourceTree = "<group>"; };
+		6EAD181A28573BF0007B6728 /* BlinkingFaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlinkingFaceViewController.swift; sourceTree = "<group>"; };
+		6EAFE68C28573FDC00FDD803 /* EyeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeView.swift; sourceTree = "<group>"; };
 		6EC516B6284DC32900168430 /* EmotionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmotionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,13 +66,15 @@
 		6E00709C284A098E00839C60 /* Faceit */ = {
 			isa = PBXGroup;
 			children = (
-				6E00709D284A098E00839C60 /* AppDelegate.swift */,
-				6E00709F284A098E00839C60 /* SceneDelegate.swift */,
+				6EAD181A28573BF0007B6728 /* BlinkingFaceViewController.swift */,
+				6EAFE68C28573FDC00FDD803 /* EyeView.swift */,
+				6EC516B6284DC32900168430 /* EmotionsViewController.swift */,
 				6E0070A1284A098E00839C60 /* FaceViewController.swift */,
 				6E27A7C5284A0BA100A1A855 /* FaceView.swift */,
 				6E43CCB3284B497E00A239AD /* FacialExpression.swift */,
 				6E0070A3284A098E00839C60 /* Main.storyboard */,
-				6EC516B6284DC32900168430 /* EmotionsViewController.swift */,
+				6E00709D284A098E00839C60 /* AppDelegate.swift */,
+				6E00709F284A098E00839C60 /* SceneDelegate.swift */,
 				6E0070A6284A099100839C60 /* Assets.xcassets */,
 				6E0070A8284A099100839C60 /* LaunchScreen.storyboard */,
 				6E0070AB284A099100839C60 /* Info.plist */,
@@ -151,7 +157,9 @@
 				6E00709E284A098E00839C60 /* AppDelegate.swift in Sources */,
 				6EC516B7284DC32900168430 /* EmotionsViewController.swift in Sources */,
 				6E43CCB4284B497E00A239AD /* FacialExpression.swift in Sources */,
+				6EAD181B28573BF0007B6728 /* BlinkingFaceViewController.swift in Sources */,
 				6E0070A0284A098E00839C60 /* SceneDelegate.swift in Sources */,
+				6EAFE68D28573FDC00FDD803 /* EyeView.swift in Sources */,
 				6E27A7C6284A0BA100A1A855 /* FaceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
